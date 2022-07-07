@@ -1,0 +1,19 @@
+<%- include("partials/header") -%> 
+
+<h1><strong>Home</strong></h1>
+<p><%= home %></p><br>
+<h1><strong>Posts</strong></h1>
+
+<% posts.forEach(function(post) { %> 
+    <h2><%= (post.title) %> </h2>
+            <form action="/delete" method="post">
+                <p><%= (post.content).slice(0,100).concat("...") %>
+                <button class=" delete-btn btn" name="delete" type="submit" value="<%= post.id %>"><i class="material-icons">delete</i></button>
+                <a href="/posts/<%= post.id %> ">Read More </a>
+            </form>
+    </p>
+    <% }); %> 
+    
+<a class="btn btn-success btn-lg" href="compose" role="button">COMPOSE</a>
+
+<%- include("partials/footer") -%> 
