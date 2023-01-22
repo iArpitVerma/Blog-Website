@@ -26,8 +26,7 @@ const posts = [] ;
 //set up default connection
 // Write your mongoDB URL here
 // like this 'mongodb+srv://your_username:'+encodeURIComponent("Your Password") +'@cluster0.rseim.mongodb.net/blogDB'
-var url;
-var db1 = mongoose.connect(url,{useNewUrlParser:true, useUnifiedTopology:true})
+var db1 = mongoose.connect('mongodb+srv://admin-arpit:'+encodeURIComponent("Arpit#123") +'@cluster0.rseim.mongodb.net/blogDB',{useNewUrlParser:true, useUnifiedTopology:true})
 
 //get the default connection
 var db = mongoose.connection;
